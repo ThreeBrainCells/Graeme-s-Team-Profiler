@@ -1,5 +1,4 @@
-function writeHTML(mgrCd, engCdArr, intCdArr){
-    return `<!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
     
     <head>
@@ -20,13 +19,25 @@ function writeHTML(mgrCd, engCdArr, intCdArr){
         </header>
         <main>
             <div class="manager-card">
-                ${mgrCd}
+                
+    <div class="card" style="width:18rem;>
+        <div class="card-body>
+            <h5 class="card-title">me</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class = "list-group-item"> ID: me</li>
+            <li class = "list-group-item"> Office: me</li>
+        </ul>
+        <div class="card-body">
+            <a href=mailto: me>Email: me</a>
+        </div>
+    </div>
             </div>
             <div class="engineer-cards card-group">
-                ${engCdArr}
+                
             </div>
             <div class="intern-cards card-group">
-                ${intCdArr}
+                
             </div>
         </main>
     
@@ -35,7 +46,4 @@ function writeHTML(mgrCd, engCdArr, intCdArr){
     
     
     
-    </html>`
-}
-
-module.exports = writeHTML
+    </html>

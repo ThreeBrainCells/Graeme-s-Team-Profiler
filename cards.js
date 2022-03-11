@@ -2,14 +2,14 @@ function rendMgrCard(mgr){
     mgrCard = `
     <div class="card" style="width:18rem;>
         <div class="card-body>
-            <h5 class="card-title">${mgr.managerName}</h5>
+            <h5 class="card-title">${mgr.name}</h5>
         </div>
         <ul class="list-group list-group-flush">
-            <li class = "list-group-item"> ID: ${mgr.managerID}</li>
-            <li class = "list-group-item"> Office: ${data.managerOffice}</li>
+            <li class = "list-group-item"> ID: ${mgr.id}</li>
+            <li class = "list-group-item"> Office: ${mgr.office}</li>
         </ul>
         <div class="card-body">
-            <a href=mailto: ${mgr.managerEmail}>Email: ${mgr.managerEmail}</a>
+            <a href=mailto: ${mgr.email}>Email: ${mgr.email}</a>
         </div>
     </div>`
     return mgrCard
@@ -21,14 +21,14 @@ function rendEngCards(engCdArr){
         const engCd = `
         <div class="card" style="width:18rem;>
             <div class="card-body>
-                <h5 class="card-title">${eng.engName}</h5>
+                <h5 class="card-title">${eng.name}</h5>
             </div>
-            <div class = "card-body"> ID: ${eng.engID}</div>
+            <div class = "card-body"> ID: ${eng.id}</div>
             <div class="card-body">
-                <a href=${eng.engGit}>GitHub: ${eng.engGit}</a>
+                <a href=${eng.github}>GitHub: ${eng.github}</a>
             </div>
             <div class="card-body">
-                <a href=mailto: ${eng.engEmail}>Email: ${eng.engEmail}</a>
+                <a href=mailto: ${eng.email}>Email: ${eng.email}</a>
             </div>
         </div>`
         engCdLit.push(engCd)
@@ -42,14 +42,14 @@ function rendIntCards(intCdArr){
         const intCd = `
         <div class="card" style="width:18rem;>
             <div class="card-body>
-                <h5 class="card-title">${int.intName}</h5>
+                <h5 class="card-title">${int.name}</h5>
             </div>
-            <div class = "card-body"> ID: ${int.intID}</div>
+            <div class = "card-body"> ID: ${int.id}</div>
             <div class = "card-body">
-                A student at ${int.intSchool}
+                A student at ${int.school}
             </div>
             <div class="card-body">
-                <a href=mailto: ${int.intEmail}>Email: ${int.intEmail}</a>
+                <a href=mailto: ${int.email}>Email: ${int.email}</a>
             </div>
         </div>`
         intCdLit.push(intCd)

@@ -1,8 +1,5 @@
 const team = require('../team');
 const cards = require('../cards');
-const { it } = require('jest-circus');
-const { describe } = require('yargs');
-
 
 describe("rendMgrCard", () =>{
     it("should create html code with inputs from parameters", () =>{
@@ -27,19 +24,19 @@ describe("rendMgrCard", () =>{
 describe("rendEngCard", () =>{
     it("should create html code with inputs from parameters", () => {
         const str = `
-        <div class="card" style="width:18rem;>
-            <div class="card-body>
-                <h5 class="card-title">Graeme</h5>
-            </div>
-            <div class = "card-body"> ID: Montrose</div>
-            <div class="card-body">
-                <a href=github.com/ThreeBrainCells>GitHub: github.com/ThreeBrainCells</a>
-            </div>
-            <div class="card-body">
-                <a href=mailto: teentrose@gmail.com>Email: teentrose@gmail.com</a>
-            </div>
+    <div class="card" style="width:18rem;>
+        <div class="card-body>                
+        <h5 class="card-title">Graeme</h5>
         </div>
-        <div class="card" style="width:18rem;>
+        <div class = "card-body"> ID: Montrose</div>
+        <div class="card-body">
+        <a href=github.com/ThreeBrainCells>GitHub: github.com/ThreeBrainCells</a>
+        </div>
+        <div class="card-body">
+            <a href=mailto: teentrose@gmail.com>Email: teentrose@gmail.com</a>
+        </div>
+    </div>
+    <div class="card" style="width:18rem;>
             <div class="card-body>
                 <h5 class="card-title">Larry</h5>
             </div>
