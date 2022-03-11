@@ -1,7 +1,10 @@
 const { managerQuestions, EngineerQuestions, internQuestions } = require('./questions')
 const writeHTML = require('./writer')
 const { rendMgrCard, rendEngCards, rendIntCards } = require('./cards')
-const team = require('./team')
+const {Employee} = require('./library/Employee')
+const {Manager} = require('./library/Manager')
+const {Engineer} = require('./library/Engineer')
+const {Intern} = require('./library/Intern')
 const inquirer = require('inquirer')
 const fs = require('fs')
 
@@ -20,7 +23,7 @@ const continueQuestion = {
 
 function EngQuest() {
     inquirer.prompt(EngineerQuestions).then(data => {
-        const eng = new team.Engineer(data.engName, data.engID, data.engEmail, data.engGit)
+        const eng = new Engineer(data.engName, data.engID, data.engEmail, data.engGit)
         engCdArr.push(eng)
         continueWriting()
     })
@@ -28,13 +31,26 @@ function EngQuest() {
 }
 function intQuest() {
     inquirer.prompt(internQuestions).then(data => {
-        const int = new team.Engineer(data.intName, data.intID, data.intEmail, data.intSchool)
+        const int = new Intern(data.intName, data.intID, data.intEmail, data.intSchool)
         intCdArr.push(int)
         continueWriting()
     })
 
 }
 
+function exitApp() {
+    if(engCdArr.length !== 0){
+        engCards = rendEngCards(engCdArr)
+    }
+    if(intCdArr.length !== 0){
+        intCards = rendIntCards(intCdArr)
+    }
+
+    const HTML = writeHTML(mgrCard, engCards, intCards)
+    console.log(HTML)
+    fs.writeFile('index.html', HTML, (err) =>
+        err ? console.error(err) : console.log('Your team is ready!'))
+};
 
 function continueWriting() {
     inquirer.prompt(continueQuestion).then(data => {
@@ -48,6 +64,7 @@ function continueWriting() {
                 break;
             case "That's the whole team":
                 exitApp()
+                break;
         }
     })
 }
@@ -55,26 +72,19 @@ function continueWriting() {
 function init() {
 
     inquirer.prompt(managerQuestions).then(data => {
-        const mgr = new team.Manager(data.managerName, data.managerID, data.managerEmail, data.managerOffice)
+        const mgr = new Manager(data.managerName, data.managerID, data.managerEmail, data.managerOffice)
         console.log(mgr)
+        console.log(mgr.getRole())
 
         mgrCard = rendMgrCard(mgr)
         return mgrCard
-    }).then(mangerHTML => {
+    }).then(() => {
         continueWriting()
-
     })
 }
 
 
-function exitApp() {
-    engCards = rendEngCards(engCdArr)
-    intCards = rendIntCards(intCdArr)
-    const HTML = writeHTML(mgrCard, engCards, intCards)
-    console.log(HTML)
-    fs.writeFile('index.html', HTML, (err) =>
-        err ? console.error(err) : console.log('Your team is ready!'))
-};
+
 
 
 //use fs to write index.html using objects
@@ -84,3 +94,4 @@ function exitApp() {
 
 
 init();
+

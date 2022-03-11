@@ -1,15 +1,16 @@
 function rendMgrCard(mgr){
     mgrCard = `
-    <div class="card" style="width:18rem;>
+    <div class="card align-items:center" style="width:18rem;>
+        <div class = "card-header>${mgr.getRole()}</div>
         <div class="card-body>
-            <h5 class="card-title">${mgr.name}</h5>
+            <h5 class="card-title">${mgr.getName()}</h5>
         </div>
         <ul class="list-group list-group-flush">
-            <li class = "list-group-item"> ID: ${mgr.id}</li>
-            <li class = "list-group-item"> Office: ${mgr.office}</li>
+            <li class = "list-group-item"> ID: ${mgr.getID()}</li>
+            <li class = "list-group-item"> Office: ${mgr.getOffice()}</li>
         </ul>
         <div class="card-body">
-            <a href=mailto: ${mgr.email}>Email: ${mgr.email}</a>
+            <a href=mailto: ${mgr.getEmail()}>Email: ${mgr.getEmail()}</a>
         </div>
     </div>`
     return mgrCard
@@ -19,16 +20,17 @@ function rendEngCards(engCdArr){
     let engCdLit = []
     engCdArr.forEach((eng) => {
         const engCd = `
-        <div class="card" style="width:18rem;>
+        <div class="card align-items:center" style="width:18rem;>
+        <div class = "card-header>${eng.getRole()}</div>
             <div class="card-body>
-                <h5 class="card-title">${eng.name}</h5>
+                <h5 class="card-title">${eng.getName()}</h5>
             </div>
-            <div class = "card-body"> ID: ${eng.id}</div>
+            <div class = "card-body"> ID: ${eng.getID()}</div>
             <div class="card-body">
-                <a href=${eng.github}>GitHub: ${eng.github}</a>
+                <a href=${eng.getGithub()}>GitHub: ${eng.getGithub()}</a>
             </div>
             <div class="card-body">
-                <a href=mailto: ${eng.email}>Email: ${eng.email}</a>
+                <a href=mailto: ${eng.getEmail()}>Email: ${eng.getEmail()}</a>
             </div>
         </div>`
         engCdLit.push(engCd)
@@ -40,16 +42,17 @@ function rendIntCards(intCdArr){
     let intCdLit = []
     intCdArr.forEach((int) => {
         const intCd = `
-        <div class="card" style="width:18rem;>
+        <div class="card align-items:center" style="width:18rem;>
+        <div class = "card-header>${int.getRole()}</div>
             <div class="card-body>
-                <h5 class="card-title">${int.name}</h5>
+                <h5 class="card-title">${int.getName()}</h5>
             </div>
-            <div class = "card-body"> ID: ${int.id}</div>
+            <div class = "card-body"> ID: ${int.getID()}</div>
             <div class = "card-body">
-                A student at ${int.school}
+                A student at ${int.getSchool()}
             </div>
             <div class="card-body">
-                <a href=mailto: ${int.email}>Email: ${int.email}</a>
+                <a href=mailto: ${int.getEmail()}>Email: ${int.getEmail()}</a>
             </div>
         </div>`
         intCdLit.push(intCd)

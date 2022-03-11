@@ -19,13 +19,13 @@ function writeHTML(mgrCd, engCdArr, intCdArr){
           </div>
         </header>
         <main>
-            <div class="manager-card">
+            <div class="manager-card d-flex justify-content-center">
                 ${mgrCd}
             </div>
-            <div class="engineer-cards card-group">
+            <div class="engineer-cards card-group d-flex justify-content-center">
                 ${engCdArr}
             </div>
-            <div class="intern-cards card-group">
+            <div class="intern-cards card-group d-flex justify-content-center">
                 ${intCdArr}
             </div>
         </main>
