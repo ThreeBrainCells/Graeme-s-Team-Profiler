@@ -28,6 +28,8 @@
   ## Demonstration
 -----------------------------------
   ### Links and Screenshots go here
+  ![What a potential creation of this app looks like](./Graeme%20Profiler%20Screenshot.png)
+  ![In action:](./Graeme%20Profiler%20Demo%20Mar%2011%2C%202022%208_30%20PM.webm)
 
   <a id="contributors"></a>
   ## Contribution Credits
