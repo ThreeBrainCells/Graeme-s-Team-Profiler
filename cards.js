@@ -1,8 +1,8 @@
 function rendMgrCard(mgr){
     mgrCard = `
-    <div class="card align-items:center" style="width:18rem;>
-        <div class = "card-header>${mgr.getRole()}</div>
-        <div class="card-body>
+    <div class="card align-items:center" style="width:18rem;">
+        <div class = "card-header">${mgr.getRole()}</div>
+        <div class="card-body">
             <h5 class="card-title">${mgr.getName()}</h5>
         </div>
         <ul class="list-group list-group-flush">
@@ -20,9 +20,9 @@ function rendEngCards(engCdArr){
     let engCdLit = []
     engCdArr.forEach((eng) => {
         const engCd = `
-        <div class="card align-items:center" style="width:18rem;>
-        <div class = "card-header>${eng.getRole()}</div>
-            <div class="card-body>
+        <div class="card align-items:center" style="width:18rem;">
+        <div class = "card-header">${eng.getRole()}</div>
+            <div class="card-body">
                 <h5 class="card-title">${eng.getName()}</h5>
             </div>
             <div class = "card-body"> ID: ${eng.getID()}</div>
@@ -42,9 +42,9 @@ function rendIntCards(intCdArr){
     let intCdLit = []
     intCdArr.forEach((int) => {
         const intCd = `
-        <div class="card align-items:center" style="width:18rem;>
-        <div class = "card-header>${int.getRole()}</div>
-            <div class="card-body>
+        <div class="card align-items:center" style="width:18rem;">
+        <div class = "card-header">${int.getRole()}</div>
+            <div class="card-body">
                 <h5 class="card-title">${int.getName()}</h5>
             </div>
             <div class = "card-body"> ID: ${int.getID()}</div>
