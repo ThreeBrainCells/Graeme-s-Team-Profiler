@@ -17,7 +17,7 @@
   <a id="installation"></a>
   ## Installation Instructions
   -----------------
-  ### the essential node modules you will need are inquirer and jest(for testing)
+  ### Clone the repo, open terminal to directory, type npm i into the command-line/terminal
 
   <a id="usage"></a>
   ## User Instructions
@@ -29,7 +29,7 @@
 -----------------------------------
   ### Links and Screenshots go here
   ![What a potential creation of this app looks like](./Graeme%20Profiler%20Screenshot.png)
-  ![In action:](./Graeme%20Profiler%20Demo%20Mar%2011%2C%202022%208_30%20PM.webm)
+  [In action:](https://drive.google.com/open?id=1072sze17TYhW8xwUGkFZTNFr-UDkcETH&authuser=teentrose%40gmail.com&usp=drive_fs)
 
   <a id="contributors"></a>
   ## Contribution Credits
@@ -39,8 +39,8 @@
   <a id="questions"></a>
   ## For Questions
 ---------------------------------
-  ### My Github Profile is here: [ThreeBrainCells](https://github.com/ThreeBrainCells)
-  ### My email is [teentrose@gmail.com](mailto:teentrose@gmail.com)
+  ### My Github Profile is here: ![ThreeBrainCells](https://github.com/ThreeBrainCells)
+  ### My email is ![teentrose@gmail.com](mailto:teentrose@gmail.com)
   
   <a id="license"></a>
   ## Licensing
