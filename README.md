@@ -39,8 +39,8 @@
   <a id="questions"></a>
   ## For Questions
 ---------------------------------
-  ### My Github Profile is here: https://github.com/ThreeBrainCells
-  ### My email is teentrose@gmail.com
+  ### My Github Profile is here: [ThreeBrainCells](https://github.com/ThreeBrainCells)
+  ### My email is [teentrose@gmail.com](mailto:teentrose@gmail.com)
   
   <a id="license"></a>
   ## Licensing
